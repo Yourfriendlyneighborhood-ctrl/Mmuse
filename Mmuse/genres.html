@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genres - Monika's Melody Muse</title>
+    <link rel="icon" type="image/x-icon" href="https://huggingface.co/spaces/edder12/monika-s-melody-muse/resolve/main/images/favi.png">
+<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div id="vanta-bg" class="fixed top-0 left-0 w-full h-full z-0"></div>
+    <div class="relative z-10 min-h-screen">
+        <!-- Header -->
+        <header class="gradient-bg text-white shadow-lg">
+            <div class="container mx-auto px-4 py-6">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-2">
+                        <i data-feather="music" class="w-8 h-8"></i>
+                        <h1 class="text-2xl font-bold">Monika's Melody Muse</h1>
+                    </div>
+                    <nav>
+                        <ul class="flex space-x-6">
+                            <li><a href="/" class="hover:text-purple-200 transition">Home</a></li>
+                            <li><a href="/moods" class="hover:text-purple-200 transition">Moods</a></li>
+                            <li><a href="/genres" class="hover:text-purple-200 transition font-semibold">Genres</a></li>
+                            <li><a href="/about" class="hover:text-purple-200 transition">About</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 py-12">
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold mb-8 text-gray-800 relative inline-block">
+                    <span>Browse By Genre</span>
+                    <span class="absolute bottom-0 left-0 w-full h-1 bg-purple-500 rounded-full"></span>
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <a href="/genres/electronic" class="genre-card bg-white rounded-xl shadow-lg p-8 transition-transform hover:scale-105 hover:shadow-xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                                <i data-feather="radio" class="text-purple-600 w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Electronic</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Synthesized beats and digital soundscapes</p>
+                        <div class="text-sm text-purple-600 font-medium">18 tracks</div>
+                    </a>
+                    <a href="/genres/acoustic" class="genre-card bg-white rounded-xl shadow-lg p-8 transition-transform hover:scale-105 hover:shadow-xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                                <i data-feather="music" class="text-green-600 w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Acoustic</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Organic and unplugged instrumental pieces</p>
+                        <div class="text-sm text-green-600 font-medium">12 tracks</div>
+                    </a>
+                    <a href="/genres/ambient" class="genre-card bg-white rounded-xl shadow-lg p-8 transition-transform hover:scale-105 hover:shadow-xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                <i data-feather="wind" class="text-blue-600 w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Ambient</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Atmospheric and immersive sound environments</p>
+                        <div class="text-sm text-blue-600 font-medium">14 tracks</div>
+                    </a>
+                    <a href="/genres/classical" class="genre-card bg-white rounded-xl shadow-lg p-8 transition-transform hover:scale-105 hover:shadow-xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                                <i data-feather="book" class="text-yellow-600 w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Classical</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Timeless compositions with orchestral elements</p>
+                        <div class="text-sm text-yellow-600 font-medium">9 tracks</div>
+                    </a>
+                    <a href="/genres/jazz" class="genre-card bg-white rounded-xl shadow-lg p-8 transition-transform hover:scale-105 hover:shadow-xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mr-4">
+                                <i data-feather="mic" class="text-red-600 w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Jazz</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Improvisational and rhythmic sophistication</p>
+                        <div class="text-sm text-red-600 font-medium">7 tracks</div>
+                    </a>
+                    <a href="/genres/experimental" class="genre-card bg-white rounded-xl shadow-lg p-8 transition-transform hover:scale-105 hover:shadow-xl">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
+                                <i data-feather="compass" class="text-indigo-600 w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Experimental</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Innovative and boundary-pushing sonic explorations</p>
+                        <div class="text-sm text-indigo-600 font-medium">11 tracks</div>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="gradient-bg text-white py-12 mt-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Monika's Melody Muse</h3>
+                        <p class="text-purple-200">A collection of musical creations by Monika, categorized by mood and genre.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="/" class="text-purple-200 hover:text-white">Home</a></li>
+                            <li><a href="/" class="text-purple-200 hover:text-white">All Tracks</a></li>
+                            <li><a href="/moods" class="text-purple-200 hover:text-white">Moods</a></li>
+                            <li><a href="/about" class="text-purple-200 hover:text-white">About</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-purple-200 hover:text-white">
+                                <i data-feather="instagram" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" class="text-purple-200 hover:text-white">
+                                <i data-feather="twitter" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" class="text-purple-200 hover:text-white">
+                                <i data-feather="youtube" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#" class="text-purple-200 hover:text-white">
+                                <i data-feather="mail" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-purple-300 mt-8 pt-8 text-center text-purple-200">
+                    <p>&copy; 2023 Monika's Melody Muse. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize Vanta.js background
+        VANTA.WAVES({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x6e8efb,
+            shininess: 77.00,
+            waveHeight: 22.50,
+            waveSpeed: 0.85,
+            zoom: 0.75
+        });
+
+        // Initialize feather icons
+        feather.replace();
+
+        // Animation for genre cards
+        document.addEventListener('DOMContentLoaded', () => {
+            anime({
+                targets: '.genre-card',
+                translateY: [30, 0],
+                opacity: [0, 1],
+                duration: 1000,
+                delay: anime.stagger(100)
+            });
+        });
+    </script>
+</body>
+</html>
